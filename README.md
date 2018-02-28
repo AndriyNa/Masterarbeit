@@ -12,7 +12,7 @@ Anweisungen zur Ausführung des Programms:
 
 Modeling Tool Installation:
 
-I.   Kopiere den Ordner Modelling Tool...  und ...war in webapps verzeichnis von tomcat
+I.   Kopiere den Ordner Modelling Tool...  und ...war in webapps verzeichnis von tomcat.
 II.  Starte Tomcat
 III. Öffne Modeling Tool in Browser: http://localhost:8080/SitTempModelingTool
 IV.  Modelliere Templates und speichere sie in der Datenbank (CouchDB auf localhost:5984 muss laufen und muss oben genannte collections haben).
