@@ -12,7 +12,7 @@ Anweisungen zur Ausführung des Programms:
 
 Modeling Tool Installation:
 
-I.   Kopiere den Ordner Modelling Tool...  und ...war in webapps verzeichnis von tomcat.
+I.   Kopiere den Ordner Modelling Tool...  und SitTempModelingTool.war in webapps verzeichnis von tomcat.
 
 II.  Starte Tomcat
 
