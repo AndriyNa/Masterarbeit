@@ -37,11 +37,13 @@ Mapping-Ablauf:
 	 -> 'Merge' drücken.
 	 -> Flow wird erstellt und kann via 'Deploy' gestartet werden. 
 
-5. Anpassung von node.js Server durchführen:
+5. Anpassung von node.js Server-Datei server1.js durchführen:
 	- Code für Dummy-Sensordaten anpassen.
 	- Die Topics für Sensordaten-publish entsprechend gewählter Things anpassen.
 	- Die Topics für Situationobjekt-subscribe entsprechend der Situationen anpassen.
+	
+6. node.js Server starten mit dem Befehl im Terminal: node server1
 
-6. Die Situationsobjekte werden erstellt und in die Datenbank geladen.
+7. Die Situationsobjekte werden erstellt und in die Datenbank geladen.
 
 
