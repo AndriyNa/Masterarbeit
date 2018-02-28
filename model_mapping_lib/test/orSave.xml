@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="orSave" id="orSave" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="orSave" />
+		<operationNode id="Operation1" name="or">
+			<parent parentID="Situation1" />
+			<type>or</type>
+		</operationNode>
+		<contextNode id="Context1" name="demoTest">
+			<inputType>situation</inputType>
+			<situationInput>demoTest</situationInput>
+			<thing>Dürr1</thing>
+			<negated>false</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+		<contextNode id="Context2" name="demoTest">
+			<inputType>situation</inputType>
+			<situationInput>demoTest</situationInput>
+			<thing>Cloos1</thing>
+			<negated>true</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType />
+	</thingTypes>
+</SituationTemplate>

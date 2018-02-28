@@ -1,0 +1,28 @@
+﻿<SituationTemplate name="Maschiene_außer_Betrieb" id="Maschiene_außer_Betrieb" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="Maschine_außer_Betrieb"/>
+		<operationNode id="Operation1" name="ODER">
+			<parent parentID="Situation1"/>
+			<type>or</type>
+		</operationNode>
+		<contextNode id="Context1" name="Temperatur_Fehler">
+			<inputType>situation</inputType>
+			<situationInput>Temperatur_Fehler</situationInput>
+			<thing>Cloos1</thing>
+			<negated>false</negated>
+			<parent parentID="Operation1"/>
+		</contextNode>
+		<contextNode id="Context2" name="CPULoadSense">
+			<inputType>sensor</inputType>
+			<thingType>Type_A</thingType>
+			<sensorType>CPULoadSensor</sensorType>
+			<measureName>% CPU Load</measureName>
+			<opType>greaterThan</opType>
+			<value>80</value>
+			<parent parentID="Operation1"/>
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType>Type_A</thingType>
+	</thingTypes>
+</SituationTemplate>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="testxml" id="testxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="sensor13And14" />
+		<operationNode id="Operation1" name="or">
+			<parent parentID="Situation1" />
+			<type>or</type>
+		</operationNode>
+		<contextNode id="Context1" name="Sensor13">
+			<inputType>sensor</inputType>
+			<thingType>Type_A</thingType>
+			<sensorType>TempSensor</sensorType>
+			<measureName>Celcius</measureName>
+			<opType>lowerThan</opType>
+			<value>123</value>
+			<parent parentID="Operation1" />
+		</contextNode>
+		<contextNode id="Context4" name="Sensor12">
+			<inputType>sensor</inputType>
+			<thingType>Type_B</thingType>
+			<sensorType>RAMSensor</sensorType>
+			<measureName>MB RAM</measureName>
+			<opType>lowerThan</opType>
+			<value>123</value>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType>Type_A</thingType>
+		<thingType>Type_B</thingType>
+	</thingTypes>
+</SituationTemplate>

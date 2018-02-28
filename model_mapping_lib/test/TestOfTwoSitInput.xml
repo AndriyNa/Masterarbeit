@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="TestOfTwoSitInput" id="TestOfTwoSitInput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="TestOfTwoSitInput" />
+		<operationNode id="Operation1" name="AND">
+			<parent parentID="Situation1" />
+			<type>and</type>
+		</operationNode>
+		<contextNode id="Context1" name="wdae">
+			<inputType>situation</inputType>
+			<situationInput>wdae</situationInput>
+			<thing>Kuka1</thing>
+			<negated>true</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+		<contextNode id="Context3" name="thingTypeTest">
+			<inputType>situation</inputType>
+			<situationInput>thingTypeTest</situationInput>
+			<thing>Cloos2</thing>
+			<negated>true</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType />
+	</thingTypes>
+</SituationTemplate>

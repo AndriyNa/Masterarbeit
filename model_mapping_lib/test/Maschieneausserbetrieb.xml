@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="Maschieneausserbetrieb" id="Maschieneausserbetrieb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="MaschineAusserBetrieb" />
+		<operationNode id="Operation1" name="ODER">
+			<parent parentID="Situation1" />
+			<type>or</type>
+		</operationNode>
+		<contextNode id="Context1" name="TemperaturFehler">
+			<inputType>situation</inputType>
+			<situationInput>TemperaturFehler</situationInput>
+			<thing>undefined</thing>
+			<negated>false</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+		<contextNode id="Context2" name="CPULoadSense">
+			<inputType>sensor</inputType>
+			<thingType>Type_A</thingType>
+			<sensorType>CPULoadSensor</sensorType>
+			<measureName>% CPU Load</measureName>
+			<opType>greaterThan</opType>
+			<value>80</value>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType>Type_A</thingType>
+	</thingTypes>
+</SituationTemplate>

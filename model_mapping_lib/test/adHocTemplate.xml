@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="adHocTemplate" id="adHocTemplate" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="AdHocTemplate" />
+		<operationNode id="Operation3" name="lt40ANDlt24">
+			<parent parentID="Operation6" />
+			<type>and</type>
+		</operationNode>
+		<operationNode id="Operation4" name="50MBORgt44">
+			<parent parentID="Operation5" />
+			<type>or</type>
+		</operationNode>
+		<operationNode id="Operation5" name="50MBORgt44ORtg60Load">
+			<parent parentID="Operation6" />
+			<type>or</type>
+		</operationNode>
+		<operationNode id="Operation6" name="and">
+			<parent parentID="Situation1" />
+			<type>and</type>
+		</operationNode>
+		<contextNode id="Context1" name="TAlt40">
+			<inputType>sensor</inputType>
+			<thingType>Type_A</thingType>
+			<sensorType>TempSensor</sensorType>
+			<measureName>Celcius</measureName>
+			<opType>lowerThan</opType>
+			<value>40</value>
+			<parent parentID="Operation3" />
+		</contextNode>
+		<contextNode id="Context2" name="TClt24">
+			<inputType>sensor</inputType>
+			<thingType>Type_C</thingType>
+			<sensorType>TempSensor</sensorType>
+			<measureName>Celcius</measureName>
+			<opType>lowerThan</opType>
+			<value>24</value>
+			<parent parentID="Operation3" />
+		</contextNode>
+		<contextNode id="Context3" name="TB50MB">
+			<inputType>sensor</inputType>
+			<thingType>Type_B</thingType>
+			<sensorType>RAMSensor</sensorType>
+			<measureName>MB RAM</measureName>
+			<opType>lowerThan</opType>
+			<value>50</value>
+			<parent parentID="Operation4" />
+		</contextNode>
+		<contextNode id="Context4" name="TCgt44">
+			<inputType>sensor</inputType>
+			<thingType>Type_C</thingType>
+			<sensorType>TempSensor</sensorType>
+			<measureName>Celcius</measureName>
+			<opType>lowerThan</opType>
+			<value>44</value>
+			<parent parentID="Operation4" />
+		</contextNode>
+		<contextNode id="Context5" name="TAgt60load">
+			<inputType>sensor</inputType>
+			<thingType>Type_A</thingType>
+			<sensorType>CPULoadSensor</sensorType>
+			<measureName>% CPU Load</measureName>
+			<opType>greaterThan</opType>
+			<value>60</value>
+			<parent parentID="Operation5" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType>Type_A</thingType>
+		<thingType>Type_C</thingType>
+		<thingType>Type_B</thingType>
+		<thingType>Type_C</thingType>
+		<thingType>Type_A</thingType>
+	</thingTypes>
+</SituationTemplate>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="recLevel2" id="recLevel2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="recLevel2" />
+		<operationNode id="Operation1" name="AND">
+			<parent parentID="Situation1" />
+			<type>and</type>
+		</operationNode>
+		<contextNode id="Context1" name="only1Situation">
+			<inputType>situation</inputType>
+			<situationInput>only1Situation</situationInput>
+			<thing>null</thing>
+			<negated>false</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType />
+	</thingTypes>
+</SituationTemplate>

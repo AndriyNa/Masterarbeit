@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SituationTemplate name="CloudNode" id="CloudNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="situation_template_one_context.xsd">
+	<Situation>
+		<situationNode id="Situation1" name="CloudNode" />
+		<operationNode id="Operation1" name="and">
+			<parent parentID="Situation1" />
+			<type>and</type>
+		</operationNode>
+		<contextNode id="Context1" name="TemperatureOfTwoThings">
+			<inputType>situation</inputType>
+			<situationInput>TemperatureOfTwoThings</situationInput>
+			<thing>Cloos1</thing>
+			<negated>false</negated>
+			<parent parentID="Operation1" />
+		</contextNode>
+	</Situation>
+	<thingTypes>
+		<thingType />
+	</thingTypes>
+</SituationTemplate>
