@@ -12,7 +12,7 @@ Anweisungen zur Ausführung des Programms:
 
 Modeling Tool Installation:
 
-I.   Kopiere den Ordner Modelling Tool...  und SitTempModelingTool.war in webapps verzeichnis von tomcat.
+I.   Kopiere den Ordner Situation-Template-Modeling-Tool (entpacke dafür Situation-Template-Modeling-Tool.zip) und SitTempModelingTool.war in  das webapps-Verzeichnis von tomcat.
 
 II.  Starte Tomcat
 
@@ -29,7 +29,7 @@ Mapping-Ablauf:
 
 3. mosquitto starten.
 
-4. Ausführbare jar-Datei (28) starten
+4. Ausführbare jar-Datei (28_02_2018_Mapper) starten
 	 -> Auswahl des Situationstemplates
 	 -> Auswahl der Things
 	 -> Im NodeRed-Browsertab erscheint das Fenster: "The flows on the server have been updated."
